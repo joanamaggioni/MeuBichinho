@@ -20,7 +20,7 @@ export function LandingPage() {
                 <Link to="/map">Entrar</Link>
                 </Button>
                 <Button>
-                <a href="/map">Regitrar ONG</a>
+                <a href="/createNGO">Regitrar ONG</a>
                 </Button>
             </ButtonContainer>
         </Container>

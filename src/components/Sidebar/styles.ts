@@ -22,7 +22,7 @@ export const Content = styled.footer`
   
     border:0;
   
-    background: #F44A87;
+    background: var(--pink);
     border-radius: 16px;
   
     cursor: pointer;
@@ -32,8 +32,14 @@ export const Content = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    :hover {
+        filter: brightness(120%);
+    }
 `;
 
 export const Button = styled.button`
-
+    background: var(--pink);
+    border: none;
+    cursor: pointer;
 `;
