@@ -1,93 +1,98 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+  width: 100vw;
+  height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  position: relative;
+  padding: 70px 100px;
 
-    position: relative;
-    padding: 25px;
-    width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
 
-    height: 100vh;
-
-    display:flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
-
-    /* background: url('../../assets/meubichinho.svg') no-repeat 100%; */
+  background-image: url('meubichinho.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 export const Logo = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
 `;
 
-export const Img = styled.img`
-
-`;
+export const Img = styled.img``;
 
 export const Title = styled.h1`
-    font-size: 48px;
-    font-weight: 900;
-    margin-left: 20px;
-    color:#123282;
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 20px;
+  color: #123282;
 `;
 
 export const Content = styled.div`
-    width:480px;
-    padding: 20px;
+  width: 460px;
 `;
 
 export const Description = styled.h1`
-    font-size: 36px;
-    font-weight: 900;
-    margin-left: 20px;
+  font-size: 48px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
 `;
 
 export const ButtonContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
 `;
 
-export const Button = styled.button`
-    background: transparent;
-    border: none;
-    border-radius: 10px;
-    
-    font-weight: bold;
-    text-align: center;
-    font-size: 28px;
+export const JoinButton = styled.a`
+  width: max-content;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+
+  padding: 10px;
+
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+
+  font-size: 48px;
+
+  color: #123282;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  :hover {
+    background: #123282;
+    color: #fff;
     cursor: pointer;
-    
+  }
+`;
 
-    :first-child {
-        font-size: 36px;
-    }
+export const Button = styled(JoinButton)`
+  font-size: 24px;
+  background: transparent;
+  padding: 0;
 
-    :hover {
-        background: #29B6;
-        border: none;
-        color: #123282;
-        font-weight: bold;
-        text-align: center;
-    
-        cursor: pointer;
-    }
-    
-    a {
-        color: #123282;
-        text-decoration: none;
-    }
+  :hover {
+    background: transparent;
+  }
+
+  > svg {
+    margin-left: 5px;
+  }
 `;
