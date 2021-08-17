@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Sidebar } from '../../components/Sidebar';
+import { MapSidebar } from '../../components/MapSidebar';
 
 export function MapPage(){
     return (
-        <Sidebar />
+        <MapSidebar />
     )
 }

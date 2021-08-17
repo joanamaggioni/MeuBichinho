@@ -33,7 +33,7 @@ export function LandingPage() {
         <Button href="/map">
           Login ONG <FiLogIn />
         </Button>
-        <Button href="/map">Registrar ONG</Button>
+        <Button href="/createNGO">Registrar ONG</Button>
       </ButtonContainer>
     </Container>
   );

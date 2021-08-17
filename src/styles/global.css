@@ -21,6 +21,7 @@ body, input, button, textarea{
     --pink: #F44A87;
     --yellow: #FFB930;
     --blue: #38B6FF;
+    --dark_blue: #123282;
 }
 
 ::-webkit-scrollbar {
