@@ -1,5 +1,5 @@
 git clone
 
-yarn add dependencies
+yarn
 
 yarn start
