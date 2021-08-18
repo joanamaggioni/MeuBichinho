@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiLogIn } from 'react-icons/fi';
+import { FiArrowRightCircle, FiLogIn } from 'react-icons/fi';
 import MeuBichinho from '../../assets/logo.svg';
 import {
   Button,
@@ -26,14 +26,16 @@ export function LandingPage() {
             O site para você encontrar seu companheirinho
           </Description>
         </Content>
-        <JoinButton href="/map">Visitar</JoinButton>
+        <JoinButton href="/map">
+          Visitar <FiArrowRightCircle />
+        </JoinButton>
       </div>
 
       <ButtonContainer>
         <Button href="/map">
-          Login ONG <FiLogIn />
+          Entrar com ONG
+          <FiLogIn />
         </Button>
-        <Button href="/createNGO">Registrar ONG</Button>
       </ButtonContainer>
     </Container>
   );

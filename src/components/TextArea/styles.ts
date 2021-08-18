@@ -20,7 +20,7 @@ export const TextAreaComponent = styled.textarea`
 
     resize: vertical;
     
-    padding: 16px 10px;
+    padding: 16px 16px;
     border-radius: 20px;
     background: #F5F8FA;
     border: 1px solid #D3E2E5;

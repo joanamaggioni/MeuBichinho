@@ -1,3 +1,4 @@
+import { darken } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.button`
@@ -14,8 +15,10 @@ export const Container = styled.button`
 
     cursor: pointer;
 
+    transition: all 0.2s;
+
     :hover {
-        filter: brightness(120%)
+        background: ${darken(0.2, '#38b6ff')};
     }
 
 `;
