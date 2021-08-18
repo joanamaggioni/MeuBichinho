@@ -14,12 +14,8 @@ export const Label = styled.label`
   margin-bottom: 10px;
 `;
 
-interface IInputProps {
-    area: string;
-}
-
-export const Input = styled.input<IInputProps>`
-    height: ${(props) => props.area == "textarea" ? 120 : 64}px;
+export const InputComponent = styled.input`
+    height: 64px;
     
     padding: 16px 10px;
     border-radius: 20px;

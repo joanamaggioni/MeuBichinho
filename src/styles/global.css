@@ -16,7 +16,6 @@ body, input, button, textarea{
 }
 
 :root {
-    --logo: #123282;
     --title: #4D6F80;
     --text: #8FA7B3;
     --pink: #F44A87;
@@ -24,6 +23,7 @@ body, input, button, textarea{
     --blue: #38B6FF;
     --white: #ffffff;
     --border: #D3E2E5;
+    --dark_blue: #123282;
 }
 
 ::-webkit-scrollbar {
