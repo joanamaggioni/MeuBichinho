@@ -59,8 +59,7 @@ export const JoinButton = styled.a`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  background: #fff;
+  
   border: none;
   border-radius: 10px;
 
@@ -76,8 +75,11 @@ export const JoinButton = styled.a`
   text-decoration: none;
   transition: all 0.2s;
 
+  > svg {
+    margin-left: 10px;
+  }
+
   :hover {
-    background: #123282;
     color: #fff;
     cursor: pointer;
   }

@@ -17,7 +17,7 @@ export const Label = styled.label`
 export const InputComponent = styled.input`
     height: 64px;
     
-    padding: 16px 10px;
+    padding: 16px 16px;
     border-radius: 20px;
     background: #F5F8FA;
     border: 1px solid #D3E2E5;
