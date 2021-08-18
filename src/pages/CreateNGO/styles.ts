@@ -18,7 +18,7 @@ export const Title = styled.h1`
     color: var(--title);
     font-weight: 700;
 
-    border-bottom: 1px solid #D3E2E5;
+    border-bottom: 1px solid var(--border);
     margin-bottom: 40px;
     padding-bottom: 24px;
     text-align: flex-start;
@@ -28,8 +28,8 @@ export const Form = styled.div`
     width: 700px;
     margin: 64px auto;
 
-    background: #FFFFFF;
-    border: 1px solid #D3E2E5;
+    background: var(--white);
+    border: 1px solid var(--border);
     border-radius: 20px;
 
     padding: 64px 80px;

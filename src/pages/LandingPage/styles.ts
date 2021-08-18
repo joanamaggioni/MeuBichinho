@@ -31,7 +31,7 @@ export const Title = styled.h1`
   font-size: 48px;
   font-weight: 700;
   margin-left: 20px;
-  color: #123282;
+  color: var(--logo);
 `;
 
 export const Content = styled.div`
@@ -72,12 +72,12 @@ export const JoinButton = styled.a`
 
   font-size: 48px;
 
-  color: #123282;
+  color: var(--logo);
   text-decoration: none;
   transition: all 0.2s;
 
   :hover {
-    background: #123282;
+    background: var(--logo);
     color: #fff;
     cursor: pointer;
   }
