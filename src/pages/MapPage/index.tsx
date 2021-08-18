@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { FiArrowRight, FiPlus } from 'react-icons/fi';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { FiPlus } from 'react-icons/fi';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import { Link } from 'react-router-dom';
 
 import { MapSidebar } from '../../components/MapSidebar';

@@ -21,7 +21,7 @@ export function CreateNGO() {
           <TextArea label="Sobre a ONG - máximo de 300 caracteres" />
           <Input label="Endereço" type="text" />
 
-          <Button />
+          <Button text="Registrar"/>
         </Form>
       </Content>
     </Container>

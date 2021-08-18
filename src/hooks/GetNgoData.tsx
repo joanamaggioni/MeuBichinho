@@ -13,7 +13,7 @@ interface INgoProps {
 }
 
 export function GetNgoData() {
-  const [ngos, setNgos] = useState<INgoProps[]>([
+  const [ngos] = useState<INgoProps[]>([
     {
       id: 2,
       latitude: -27.0954643,

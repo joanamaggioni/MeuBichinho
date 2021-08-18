@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Container = styled.button`
     width: 100%;
 
+    margin-top: 64px;
     height: 64px;
     border: 1px solid var(--blue);
     background-color: var(--blue);

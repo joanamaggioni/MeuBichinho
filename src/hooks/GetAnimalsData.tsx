@@ -15,7 +15,7 @@ interface IAnimalProps {
 }
 
 export function GetAnimalData() {
-  const [animals, setAnimals] = useState<IAnimalProps[]>([
+  const [animals] = useState<IAnimalProps[]>([
     {
       id: 10,
       latitude: -27.1024667,
