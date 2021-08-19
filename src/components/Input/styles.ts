@@ -29,4 +29,8 @@ export const InputComponent = styled.input`
   font-size: 16px;
   color: var(--primary);
   font-weight: 500;
+
+  :focus {
+    border: 1px solid var(--secondary);
+  }
 `;

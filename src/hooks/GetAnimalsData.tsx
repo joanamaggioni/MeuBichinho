@@ -17,14 +17,14 @@ interface IAnimalProps {
 export function GetAnimalData() {
   const [animals] = useState<IAnimalProps[]>([
     {
-      id: 10,
+      id: 17,
       latitude: -27.1024667,
       longitude: -52.6342728,
       name: 'Doge armadurado',
       specie: 'dog',
     },
     {
-      id: 3,
+      id: 18,
       latitude: -27.1163136,
       longitude: -52.6278108,
       name: 'Gato ninja',
@@ -48,7 +48,7 @@ export function GetAnimalData() {
               className="map-popup"
             >
               {animals.name}
-              <Link to={`/orphanages/${animals.id}`}>
+              <Link to={`/bichinho/${animals.id}`}>
                 <FiArrowRight size={20} color="#FFF" />
               </Link>
             </Popup>

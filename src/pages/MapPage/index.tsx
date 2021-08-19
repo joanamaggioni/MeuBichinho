@@ -26,10 +26,6 @@ export function MapPage() {
         <GetNgoData />
         <GetAnimalData />
       </MapContainer>
-
-      <Link to="/orphanages/create" className="create-orphanage">
-        <FiPlus size={32} color="#FFF" />
-      </Link>
     </Container>
   );
 }
