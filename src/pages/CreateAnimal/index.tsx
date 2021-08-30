@@ -12,16 +12,15 @@ export function CreateAnimal(){
       <Sidebar />
       <Content>
         <Form>
-          <Title>Registre sua ONG</Title>
-          <Input label="Nome da ONG" type="text" />
-          <Input label="Email" type="text" />
-          <Input label="Escolha uma senha" type="password" />
-          <Input label="Confirme sua senha" type="password" />
-          <Input label="Nome do responsável" type="text" />
-          <Input label="Telefone" type="text" />
-          <TextArea label="Sobre a ONG - máximo de 300 caracteres" />
+          <Title>Dados</Title>
           <Input label="Endereço" type="text" />
-
+          <Input label="Nome do bichinho" type="text" />
+          <TextArea label="Sobre" />
+          <Input label="Número de Whatsapp" type="text" />
+          <Input label="Fotos" type="password" />
+          <Title>Visitação</Title>
+          <TextArea label="Instruções" />
+          <Input label="Horário das visitas" type="text" />
           <Button />
         </Form>
       </Content>
