@@ -1,6 +1,5 @@
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import React, { useState } from 'react';
-import { FiArrowRight, FiPlus } from 'react-icons/fi';
+import { FiPlus } from 'react-icons/fi';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import { Link } from 'react-router-dom';
 
 import { MapSidebar } from '../../components/MapSidebar';
@@ -27,10 +26,6 @@ export function MapPage() {
         <GetNgoData />
         <GetAnimalData />
       </MapContainer>
-
-      <Link to="/orphanages/create" className="create-orphanage">
-        <FiPlus size={32} color="#FFF" />
-      </Link>
     </Container>
   );
 }

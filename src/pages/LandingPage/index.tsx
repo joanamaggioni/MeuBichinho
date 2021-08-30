@@ -32,7 +32,7 @@ export function LandingPage() {
       </div>
 
       <ButtonContainer>
-        <Button href="/map">
+        <Button href="/login">
           Entrar com ONG
           <FiLogIn />
         </Button>

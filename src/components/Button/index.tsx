@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container } from './styles'
+import { Container } from './styles';
 
-export function Button(){
-    return (
-        <Container>
-            Registrar
-        </Container>
-    )
+interface IButtonProps extends React.HTMLProps<HTMLButtonElement>{
+  text: string;
+}
+
+export function Button({ text }: IButtonProps) {
+  return (<Container>{text}</Container>)
 }

@@ -17,7 +17,8 @@ body, input, button, textarea{
 
 :root {
     --title: #4D6F80;
-    --text: #8FA7B3;
+    --primary: #5C8599;
+    --secondary: #8FA7B3;
     --pink: #F44A87;
     --yellow: #FFB930;
     --blue: #38B6FF;

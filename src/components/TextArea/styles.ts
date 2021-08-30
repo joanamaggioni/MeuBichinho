@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Label = styled.label`
   font-size: 18px;
-  color: var(--text);
+  color: var(--secondary);
   line-height: 24px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -27,6 +27,6 @@ export const TextAreaComponent = styled.textarea`
     margin-bottom: 24px;
 
     font-size: 16px;
-    color: var(--text);
+    color: var(--primary);
     font-weight: 500;
 `;

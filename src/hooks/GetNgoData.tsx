@@ -13,9 +13,9 @@ interface INgoProps {
 }
 
 export function GetNgoData() {
-  const [ngos, setNgos] = useState<INgoProps[]>([
+  const [ngos] = useState<INgoProps[]>([
     {
-      id: 2,
+      id: 19,
       latitude: -27.0954643,
       longitude: -52.6146158,
       name: 'ONG de Konoha',
@@ -38,7 +38,7 @@ export function GetNgoData() {
               className="map-popup"
             >
               {ngo.name}
-              <Link to={`/orphanages/${ngo.id}`}>
+              <Link to={`/ong/${ngo.id}`}>
                 <FiArrowRight size={20} color="#FFF" />
               </Link>
             </Popup>

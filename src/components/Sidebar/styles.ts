@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: fixed;
+
+  min-height: 100vh;
   height: 100%;
   padding: 32px 24px;
-  background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
+  background: linear-gradient(329.54deg, #00a1ff 0%, #38b6ff 100%);
 
   display: flex;
   flex-direction: column;
@@ -33,7 +35,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   transition: all 0.2s;
 
   :hover {

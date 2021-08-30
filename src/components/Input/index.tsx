@@ -8,7 +8,6 @@ interface IInputProps {
 }
 
 export function Input({ label, type, placeholder }: IInputProps) {
-  console.log(type);
   return (
     <Container>
       <Label>{label}</Label>
