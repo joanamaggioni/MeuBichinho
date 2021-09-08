@@ -14,7 +14,7 @@ export function LoginPage() {
         <Button text="Entrar" />
         <MoreInfoDiv>
           <a href="/password_reset">Esqueceu a senha?</a>
-          <a href="/createNGO">Não possuo cadastro</a>
+          <a href="/create/NGO">Não possuo cadastro</a>
         </MoreInfoDiv>
       </Main>
     </Container>
