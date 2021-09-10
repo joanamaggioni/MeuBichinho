@@ -7,6 +7,7 @@ import {
   Container,
   Content,
   Description,
+  Dev,
   Img,
   JoinButton,
   Logo,
@@ -37,6 +38,7 @@ export function LandingPage() {
           <FiLogIn />
         </Button>
       </ButtonContainer>
+      <Dev href="/about">Saiba mais sobre os desenvolvedores</Dev>
     </Container>
   );
 }

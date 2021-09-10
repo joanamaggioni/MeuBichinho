@@ -1,3 +1,4 @@
+import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -37,6 +38,57 @@ export const Form = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+`;
+
+export const Modal = styled.div`
+    width: 500px;
+    background: rgba(245, 245, 245, 1.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #d3e2e5;
+    border-radius: 20px;
+    margin: 64px auto;
+
+    padding: 64px 80px;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    button {
+      width: 50%;
+      height: 34px;
+      border-radius: 20px;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      :first-child {
+        background-color: var(--red);
+
+        :hover {
+          background: ${darken(0.1, '#fe6363')};
+        }
+      }
+
+      :last-child {
+        background-color: var(--green);
+
+        :hover {
+          background: ${darken(0.1, '#07d174')};
+        }
+      }
+    }
 `;
 
 export const Content = styled.div`
@@ -116,3 +168,44 @@ export const ImagesContainer = styled.div`
 export const InputImage = styled.input`
     display: none;
 `;
+
+export const AlterButtons = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 24px;
+`;
+
+export const RemoveButton = styled.button`
+    border: none;
+    border-radius: 20px;
+    height: 64px;
+    width: 50%;
+    background-color: var(--red);
+    color: var(--white);
+
+    cursor: pointer;
+
+    :hover {
+      background: ${darken(0.1, '#fe6363')};
+    }
+`;
+
+export const AdotadoButton = styled.button`
+    border: none;
+    border-radius: 20px;
+    height: 64px;
+    width: 50%;
+    background-color: var(--green);
+    color: var(--white);
+
+    cursor: pointer;
+
+    :hover {
+      background: ${darken(0.2, '#07d174')};
+    }
+`;
+

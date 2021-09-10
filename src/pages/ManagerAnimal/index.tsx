@@ -1,23 +1,39 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import { Sidebar } from "../../components/Sidebar";
-import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
-import { TextArea } from "../../components/TextArea";
-import Switch from "react-switch";
-import { Container, Content, Description, Form, ImagesContainer, InputImage, Span, Title } from "./styles";
-import { LeafletMouseEvent } from "leaflet";
-import mapIcon from "../../utils/mapIcon";
-import { FiPlus } from "react-icons/fi";
+import React, { ChangeEvent, useState } from 'react';
+import { MapContainer, Marker, TileLayer } from 'react-leaflet';
+import { Sidebar } from '../../components/Sidebar';
+import { Input } from '../../components/Input';
+import { Button } from '../../components/Button';
+import { TextArea } from '../../components/TextArea';
+import Switch from 'react-switch';
+import { ImCancelCircle } from 'react-icons/im';
+import { GiConfirmed } from 'react-icons/gi';
+import {
+  AdotadoButton,
+  AlterButtons,
+  Container,
+  Content,
+  Description,
+  Form,
+  ImagesContainer,
+  InputImage,
+  Modal,
+  RemoveButton,
+  Span,
+  Title,
+} from './styles';
+import { LeafletMouseEvent } from 'leaflet';
+import mapIcon from '../../utils/mapIcon';
+import { FiPlus } from 'react-icons/fi';
 
-export function CreateAnimal() {
+export function ManagerAnimal() {
   const [checked, setChecked] = useState(true);
-  const [count, setCount] = useState(1);
+  const [remove, setRemove] = useState(false);
+  const [update, setUpdate] = useState(false);
   const [isCat, setIsCat] = useState(false);
-  const [name, setName] = useState('julya');
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
-  const [previewImages, setPreviewImages] = useState<string[]>([])
+  const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [images, setImages] = useState<File[]>([]);
+  let count: number = 1;
 
   function handleCheck() {
     if (checked === true) {
@@ -46,28 +62,43 @@ export function CreateAnimal() {
     });
   }
 
+  function handleRemove(){
+    setRemove(true)
+  }
+
   const handleSelectImages = (event: ChangeEvent<HTMLInputElement>) => {
-    if(!event.target.files){
+    if (!event.target.files) {
       return;
     }
-    const selectedImages = Array.from(event.target.files)
+    const selectedImages = Array.from(event.target.files);
     setImages([...images, ...selectedImages]);
 
-    const selectedImagesPreview = selectedImages.map(image => {
-      return URL.createObjectURL(image)
-    })
+    const selectedImagesPreview = selectedImages.map((image) => {
+      return URL.createObjectURL(image);
+    });
 
     setPreviewImages([...previewImages, ...selectedImagesPreview]);
-    setCount(count+1)
+    count++;
+  };
 
-  }
+
 
   return (
     <Container>
       <Sidebar />
       <Form>
-        <Title>Registre um bichinho</Title>
-        <Input label="Nome do bichinho" type="text" onChange={(e) => console.log(e.target.value)}/>
+        {remove==true &&  
+            <Modal>
+            <Title>Tem certeza que deseja excluir Doge Armadurado?</Title>
+            <Span>Ao clicar em sim todas as informações serão perdidas e essa ação não poderá ser desfeita.</Span>
+            <AlterButtons>
+            <button onClick={() => setRemove(false)}>Não <ImCancelCircle /></button>
+            <button>Sim <GiConfirmed /></button>
+            </AlterButtons>
+          </Modal>
+        }
+        <Title>Editar bichinho</Title>
+        <Input label="Nome do bichinho" type="text" />
         <Input label="Idade" type="number" />
         <Content>
           <Span>Possui alguma necessidade especial?</Span>
@@ -105,7 +136,7 @@ export function CreateAnimal() {
         <Span>Selecione a localização no mapa:</Span>
         <MapContainer
           center={[-27.1024667, -52.6342728]}
-          style={{ width: "100%", height: 280 }}
+          style={{ width: '100%', height: 280 }}
           zoom={12.5}
           onClick={handleMapClick}
         >
@@ -122,26 +153,34 @@ export function CreateAnimal() {
         </MapContainer>
         <Span>Insira algumas fotos fofinhas!</Span>
         <ImagesContainer>
-          {previewImages.map(image => {
-            return (
-              <img key={image} src={image} />
-            )
+          {previewImages.map((image) => {
+            return <img key={image} src={image} />;
           })}
-          {count <= 5 && 
-             <label htmlFor="image[]">
-             <FiPlus size={24} color="#15b6d6" />
-           </label>   
-          } 
+          {count <= 5 && (
+            <label htmlFor="image[]" className="new-image">
+              <FiPlus size={24} color="#15b6d6" />
+            </label>
+          )}
         </ImagesContainer>
-          <InputImage multiple onChange={handleSelectImages} type="file" id="image[]" />
-                 
+
+        <InputImage
+          multiple
+          onChange={handleSelectImages}
+          type="file"
+          id="image[]"
+        />
+
         <TextArea label="Sobre o bichinho - máximo de 300 caracteres" />
         <Input
           label="Telefone para contato"
           type="text"
           placeholder="(00) 00000-0000"
         />
-        <Button text="Registrar" />
+        <Button text="Atualizar"/>
+        <AlterButtons>
+        <RemoveButton onClick={handleRemove}>Excluir</RemoveButton>
+        <AdotadoButton>Marcar como adotado</AdotadoButton>
+        </AlterButtons>
       </Form>
     </Container>
   );

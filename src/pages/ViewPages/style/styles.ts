@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   display: flex;
@@ -94,5 +95,64 @@ export const Footer = styled.footer`
     line-height: 24px;
     color: #0089a5;
     text-decoration: none;
+  }
+`;
+
+export const Description = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  label { 
+  font-size: 18px;
+  color: var(--secondary);
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  }
+`;
+
+export const PhoneButton = styled.button`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 64px;
+  color: var(--white);
+  border: none;
+  border-radius: 20px;
+  background-color: #01C563;
+  margin-top: 24px;
+  align-items: center;
+
+
+  cursor: pointer;
+    :hover {
+    background: ${darken(0.2, '#01C563')};
+  }
+`;
+
+export const MailButton = styled.button`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 64px;
+  color: var(--white);
+  border: none;
+  border-radius: 20px;
+  background-color: var(--blue);
+  margin-top: 48px;
+  align-items: center;
+
+
+  cursor: pointer;
+    :hover {
+    background: ${darken(0.2, '#38B6FF')};
   }
 `;

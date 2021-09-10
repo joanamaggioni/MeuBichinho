@@ -16,6 +16,16 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (max-width: 800px){
+    padding: 70px 50px;
+  }
+
+  @media (max-width: 520px){
+    background-image: none;
+    background-color: var(--blue);
+    align-items: center;
+  }
 `;
 
 export const Logo = styled.div`
@@ -23,6 +33,10 @@ export const Logo = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 100px;
+
+  @media(max-width: 470px){
+    justify-content: center;
+  }
 `;
 
 export const Img = styled.img``;
@@ -32,10 +46,26 @@ export const Title = styled.h1`
   font-weight: 700;
   margin-left: 20px;
   color: var(--logo);
+
+  @media(max-width: 470px){
+    font-size: 36px;
+  }
 `;
 
 export const Content = styled.div`
   width: 460px;
+
+  @media(max-width: 470px){
+    width: 400px;
+  }
+
+  @media(max-width: 400px){
+    width: 350px;
+  }
+
+  @media(max-width: 320px){
+    width: 300px;
+  }
 `;
 
 export const Description = styled.h1`
@@ -43,6 +73,24 @@ export const Description = styled.h1`
   font-weight: 700;
 
   margin-bottom: 20px;
+
+  @media (max-width: 940px){
+    font-size: 36px;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 830px){
+    font-size: 30px;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 520px){
+    text-align: center;
+  }
+
+  @media(max-width: 470px){
+    font-size: 28px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -51,6 +99,10 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
+
+  @media (max-width: 520px){
+    align-items: center;
+  }
 `;
 
 export const JoinButton = styled.a`
@@ -75,8 +127,18 @@ export const JoinButton = styled.a`
   text-decoration: none;
   transition: all 0.2s;
 
+
   > svg {
     margin-left: 10px;
+  }
+
+  @media (max-width: 940px){
+    font-size: 36px;
+  }
+
+  @media (max-width: 520px){
+    width: 100%;
+    justify-content: center;
   }
 
   :hover {
@@ -90,11 +152,29 @@ export const Button = styled(JoinButton)`
   background: transparent;
   padding: 0;
 
+  @media (max-width: 940px){
+    font-size: 20px;
+    margin-left: 0px;
+  }
+
   :hover {
     background: transparent;
   }
 
   > svg {
     margin-left: 5px;
+  }
+`;
+
+export const Dev = styled.a`
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 15px;
+  color: var(--white);
+
+  :hover {
+    color: var(--dark_blue);
+    font-weight: bold;
   }
 `;

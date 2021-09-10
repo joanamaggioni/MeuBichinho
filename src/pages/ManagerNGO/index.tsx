@@ -3,13 +3,16 @@ import { Sidebar } from '../../components/Sidebar';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { TextArea } from '../../components/TextArea';
-import { Container, Form, Span, Title } from './styles';
-import { LeafletMouseEvent } from 'leaflet';
+import { AlterButtons, Container, Form, Modal, RemoveButton, Span, Title, Update } from './styles';
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
+import { LeafletMouseEvent } from 'leaflet';
 import mapIcon from '../../utils/mapIcon';
+import { ImCancelCircle } from 'react-icons/im';
+import { GiConfirmed } from 'react-icons/gi';
 
-export function CreateNGO() {
+export function ManagerNGO() {
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
+  const [remove, setRemove] = useState(false);
 
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng;
@@ -20,22 +23,35 @@ export function CreateNGO() {
     });
   }
 
+  function handleRemove(){
+    setRemove(true)
+  }
+
+  
   return (
     <Container>
       <Sidebar />
       <Form>
-        <Title>Registre sua ONG</Title>
+        {remove==true &&  
+              <Modal>
+              <Title>Tem certeza que deseja excluir ONG de Okahona?</Title>
+              <Span>Ao clicar em sim todas as informações serão perdidas e essa ação não poderá ser desfeita.</Span>
+              <AlterButtons>
+              <button onClick={() => setRemove(false)}>Não <ImCancelCircle /></button>
+              <button>Sim <GiConfirmed /></button>
+              </AlterButtons>
+            </Modal>
+          }
+        <Title>Edite sua ONG</Title>
         <Input label="Nome da ONG" type="text" />
         <Input label="Email" type="text" />
         <Input label="Escolha uma senha" type="password" />
         <Input label="Confirme sua senha" type="password" />
         <Input label="Nome do responsável" type="text" />
-        <Input label="Telefone" type="text" />
-        <TextArea label="Sobre a ONG - máximo de 300 caracteres" />
         <Span>Selecione a localização no mapa:</Span>
         <MapContainer
           center={[-27.1024667, -52.6342728]}
-          style={{ width: '100%', height: 280 }}
+          style={{ width: "100%", height: 280 }}
           zoom={12.5}
           onClick={handleMapClick}
         >
@@ -50,8 +66,13 @@ export function CreateNGO() {
             />
           )}
         </MapContainer>
+        <Input label="Telefone" type="text" />
+        <TextArea label="Sobre a ONG - máximo de 300 caracteres" />
 
-        <Button text="Registrar" />
+        <AlterButtons>
+        <RemoveButton onClick={handleRemove}>Excluir</RemoveButton>
+        <Update>Atualizar</Update>
+        </AlterButtons>
       </Form>
     </Container>
   );

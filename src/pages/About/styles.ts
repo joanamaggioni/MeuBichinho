@@ -21,7 +21,7 @@ export const Title = styled.h1`
   text-align: flex-start;
 `;
 
-export const Form = styled.div`
+export const Main = styled.div`
   width: 700px;
   margin: 64px auto;
 
@@ -39,13 +39,33 @@ export const Form = styled.div`
   flex-direction: column;
 `;
 
+export const Photos = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 24px;
+`;
+
+export const Dev = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+`;
+
+export const Img = styled.img`
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid var(--primary);
+`;
+
 export const Span = styled.span`
-  font-size: 18px;
-  color: var(--secondary);
-  line-height: 24px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  text-align: left;
-  width: 100%;
+   font-size: 18px;
+   color: var(--title);
+   text-align: center;
 `;

@@ -13,7 +13,7 @@ export function LoginPage() {
         <Input label="Senha" type="Password" />
         <Button text="Entrar" />
         <MoreInfoDiv>
-          <a href="/password_reset">Esqueceu a senha?</a>
+          <a href="/resetPassword">Esqueceu a senha?</a>
           <a href="/create/NGO">Não possuo cadastro</a>
         </MoreInfoDiv>
       </Main>

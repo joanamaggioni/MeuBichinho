@@ -10,6 +10,22 @@ export const Container = styled.aside`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    @media(max-width: 900px){
+        width: 300px;
+    }
+
+    @media(max-width: 770px){
+        width: 280px;
+    }
+
+    @media(max-width: 700px){
+        width: 250px;
+    }
+
+    @media(max-width: 620px){
+        width: 200px;
+    }
 `;
 
 export const LogoDiv = styled.div`
@@ -20,6 +36,20 @@ export const LogoDiv = styled.div`
     margin-bottom: 124px;
 
     color: var(--dark_blue);
+    
+    @media(max-height: 620px){ 
+        justify-content: center;
+    }
+    @media(max-height: 565px){ 
+        margin-bottom: 20px;
+    }
+    
+
+    h1 { 
+        @media(max-width: 620px){
+        display: none;
+    }
+    }
 `;
 
 export const Img = styled.img`
@@ -32,6 +62,10 @@ export const Text = styled.h2`
     font-size: 36px;
     font-weight: 800;
     line-height: 42px;
+
+    @media(max-width: 700px){
+        font-size: 28px;
+    }
 `;
 
 export const Span = styled.p`
